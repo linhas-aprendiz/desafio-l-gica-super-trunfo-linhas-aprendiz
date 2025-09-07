@@ -192,20 +192,12 @@ int main() {
          char estado1[10];
          scanf("%s", estado1);
          
-         //Comparação das cartas
-        
-        //exemplo
-        /*
-        Comparação de cartas (Atributo: População):
-        Carta 1 - São Paulo (SP): 12.300.000
-        Carta 2 - Rio de Janeiro (RJ): 6.000.000
-        Resultado: Carta 1 (São Paulo) venceu!
-        */        
+         //Comparação das cartas     
 
          //Pontos Turístico - Maior vence
          printf("\n___Comparação de cartas (Atributo: Pontos turísticos)___\n");
-         printf("Carta 1 - %s (%s): %d\n",cidade1, estado1, tur1);
-         printf("Carta 1 - %s (%s): %d\n",cidade2, estado2, tur2);
+         printf("Carta 1 -  %s (%s): %d\n", cidade1, estado1, tur1);
+         printf("Carta 2 -  %s (%s): %d\n", cidade2, estado2, tur2);
 
          if(tur1 > tur2){
             printf("Resultado: Carta 1 (%s) é a vencedora!!", cidade1);
@@ -215,9 +207,15 @@ int main() {
         
 
          //Super Poder - Maior vence
-         comparacao = (int) superpoder > superpoder2;
-         carta = !comparacao + 1;
-         printf("Super Poder: Carta %d venceu (%d) \n", carta, comparacao); //, (comparacao = (int) superpoder > superpoder2), (carta = !comparacao + 1));
+         printf("\n___Comparação de cartas (Atributo: Super Poder)___\n");
+         printf("Carta 1 - Super poder de %s (%s): %f\n",cidade1, estado1, superpoder1);
+         printf("Carta 2 - Super poder de %s (%s): %f\n",cidade2, estado2, superpoder2);
+
+         if(superpoder > superpoder2){
+            printf("Resultado: Carta 1 (%s) vence!", cidade1);
+         }else {
+            printf("Resultado: Carta 2 (%s) vence!", cidade2);
+         }
 
 
      return 0;
