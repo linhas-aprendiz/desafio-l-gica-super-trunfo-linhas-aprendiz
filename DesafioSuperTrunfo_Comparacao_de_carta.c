@@ -209,16 +209,31 @@ int main() {
          }else {
             printf("Resultado: Carta 2 (%s) vence!", cidade2);
          }
+         //Menu Interativo
+         int opcao;
+         printf("\n--- Bem Vindo a aba de Comparação de Atributos das Cartas Super Trunfo ---\n");
+         printf("1- Prosseguir?\n");
+         printf("2- Encerrar?\n");
+         scanf("%d", &opcao);
 
-         int comparacao;
+         switch(opcao) {
+            case 1: {
+            int comparacao;
          printf("### Comparação de Atributos ###\n");
+         printf("1 - População\n");
+         printf("2 - Área\n"); 
+         printf("3 - PIB\n");
+         printf("4 - Pontos Turísticos\n");
+         printf("5 - Densidade Populacional\n");
          printf("Qual Atributo Você quer comparar\n");
          scanf("%d", &comparacao);
          
          switch(comparacao) {
-            case1:
-            printf("%s - %d x %s - %d", cidade1, pop1, cidade2, pop2);
-            if (pop1 > pop2){
+            case 1:
+            printf("%s - %lu x %s - %lu", cidade1, pop1, cidade2, pop2);
+            if (pop1 == pop2){
+               printf("Empate!!\n");
+            }else if (pop1 > pop2){
                printf("%s Venceu essa!\n", cidade1);
             }else{
                printf("%s Venceu essa!\n", cidade2);
@@ -226,40 +241,59 @@ int main() {
             break;
             case 2:
             printf("%s tem aproximadamente %f x %s tem aproximadamente %f", cidade1, area1, cidade2, area2);
-            if (area1 > area2){
+            if (area1 == area2){
+               printf("Empate!!\n");
+            }else if (area1 > area2){
                printf("%s Venceu essa!\n", cidade1);
             }else{
                printf("%s Venceu essa!\n", cidade2);
+            }
             break;
             case 3:
-            printf("%s com %f x %s com %f", cidade1, pib1, cidade2, area2);
-            if (pib1 > pib2){
+            printf("%s com %f x %s com %f", cidade1, pib1, cidade2, pib2);
+            if (pib1 == pib2){
+               printf("Empate!!\n");
+            }else if (pib1 > pib2){
                printf("%s Venceu essa!\n", cidade1);
-            }else{printf("%s Venceu essa!\n", cidade2);
+            }else{
+               printf("%s Venceu essa!\n", cidade2);
             }
             break;
             case 4:
-            printf("\n___Comparação de cartas (Atributo: Pontos turísticos)___\n");
+            //printf("\n___Comparação de cartas (Atributo: Pontos turísticos)___\n");
             printf("Carta 1 -  %s (%s): %d\n", cidade1, estado1, tur1);
             printf("Carta 2 -  %s (%s): %d\n", cidade2, estado2, tur2);
-            if(tur1 > tur2){
-            printf("Resultado: Carta 1 (%s) é a vencedora!!", cidade1);
+            if(tur1 == tur2){
+            printf("Resultado: Empate!!");
+            }else if(tur1 > tur2){
+            printf("Resultado: Carta 1 (%s) é a vencedora!!\n", cidade1);
             }else {
-            printf("Resultado: Carta 2 (%s) é a vencedora!!", cidade2);
+            printf("Resultado: Carta 2 (%s) é a vencedora!!\n", cidade2);
             }
             break;
             case 5:
             printf("Densidade populacional: %.1f \n -- Carta 1 -- %s", densid1, cidade1);
             printf("Densidade populacional: %.1f \n -- Carta 2 -- %s", densid2, cidade2);
-            if(densid1 < densid2){
-            printf("Resultado: Carta 1 (%s) é a vencedora!!", cidade1);
+            if(densid1 == densid2){
+            printf("Resultado: Empate!!");
+            }else if(densid1 < densid2){
+            printf("Resultado: Carta 1 (%s) é a vencedora!!\n", cidade1);
             }else {
-            printf("Resultado: Carta 2 (%s) é a vencedora!!", cidade2);
+            printf("Resultado: Carta 2 (%s) é a vencedora!!\n", cidade2);
             }
             break;
             default:
             printf("Opção Inválida!");
             break;
+            }
+         break;
+         }
+         case 2:
+         printf("Encerrando o Programa...\n");
+         break;
+         default:
+         printf("Opção Inválida!! Encerrando o Programa...\n");
+         break;
          }
 
      return 0;
