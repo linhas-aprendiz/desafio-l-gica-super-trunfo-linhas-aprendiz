@@ -1,0 +1,1 @@
+Certifique-se de que seu código está bem comentado e que o arquivo README.md do seu repositório contém instruções claras de como compilar e executar seu programa. Inclua exemplos de como usar o menu e quais são os atributos disponíveis para comparação.
