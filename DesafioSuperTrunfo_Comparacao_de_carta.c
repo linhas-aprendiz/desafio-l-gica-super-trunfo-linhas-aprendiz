@@ -164,14 +164,14 @@ int main() {
          printf("\nDados da Carta 01\n");
          printf("Estado: %c \n", letra1);
          printf("esse será o código da sua carta: %s \n", codigo1);
-         printf("Cidade: %s", cidade1);
+         printf("Cidade: %s \n", cidade1);
          printf("População: %lu \n", pop1);
          printf("PIB: R$ %0.f \n", pib1);
          printf("Pontos turísticos: %d \n", tur1);
          printf("Tamanho da cidade: %.2f por Km^2 \n", area1);
-         printf("Densidade populacional: %.1f \n -- note-se de que quanto menor o valor, mais poder tem", densid1);
+         printf("Densidade populacional: %.1f \n -- note-se de que quanto menor o valor, mais poder tem\n", densid1);
          printf("PIB per capita: R$ %.2f \n", capita1);
-         printf("Superpoder da carta 01: %.2f", superpoder);
+         printf("Superpoder da carta 01: %.2f \n", superpoder);
 
 
          //Saída de dados da carta 02
@@ -183,17 +183,17 @@ int main() {
          printf("PIB: R$ %0.f \n", pib2);
          printf("Pontos turísticos: %d \n", tur2);
          printf("Tamanho da cidade: %.2f por Km^2 \n", area2);
-         printf("Densidade populacional: %.1f \n -- note-se de que quanto menor o valor, mais poder tem", densid2);
+         printf("Densidade populacional: %.1f \n -- note-se de que quanto menor o valor, mais poder tem\n", densid2);
          printf("PIB per capita: R$ %.2f \n", capita2);
-         printf("Superpoder da carta 02: %.2f", superpoder2);
+         printf("Superpoder da carta 02: %.2f \n", superpoder2);
 
          //Carta 01 - pré estapa da Comparação de cartas
-         printf("Para fins à próxima etapa, preciso que o usuário coloque o Estado da Carta 01 (de forma abreviada)");
+         printf("Para fins à próxima etapa, preciso que o usuário coloque o Estado da Carta 01 (de forma abreviada)\n");
          char estado1[10];
          scanf("%s", estado1);
 
          //Carta 02 - pré estapa da Comparação de cartas
-         printf("Para fins à próxima etapa, preciso que o usuário coloque o Estado da Carta 01 (de forma abreviada)");
+         printf("Para fins à próxima etapa, preciso que o usuário coloque o Estado da Carta 02 (de forma abreviada)\n");
          char estado2[10];
          scanf("%s", estado2);
          
@@ -205,9 +205,9 @@ int main() {
          printf("Carta 2 - Super poder de %s (%s): %f\n",cidade2, estado2, superpoder2);
 
          if(superpoder > superpoder2){
-            printf("Resultado: Carta 1 (%s) vence!", cidade1);
+            printf("Resultado: Carta 1 (%s) vence!\n", cidade1);
          }else {
-            printf("Resultado: Carta 2 (%s) vence!", cidade2);
+            printf("Resultado: Carta 2 (%s) vence!\n", cidade2);
          }
          //Menu Interativo
          int opcao;
@@ -230,7 +230,7 @@ int main() {
          
          switch(comparacao) {
             case 1:
-            printf("%s - %lu x %s - %lu", cidade1, pop1, cidade2, pop2);
+            printf("%s - %lu x %s - %lu\n", cidade1, pop1, cidade2, pop2);
             if (pop1 == pop2){
                printf("Empate!!\n");
             }else if (pop1 > pop2){
@@ -240,7 +240,7 @@ int main() {
             }
             break;
             case 2:
-            printf("%s tem aproximadamente %f x %s tem aproximadamente %f", cidade1, area1, cidade2, area2);
+            printf("%s tem aproximadamente %f x %s tem aproximadamente %f\n", cidade1, area1, cidade2, area2);
             if (area1 == area2){
                printf("Empate!!\n");
             }else if (area1 > area2){
@@ -250,7 +250,7 @@ int main() {
             }
             break;
             case 3:
-            printf("%s com %f x %s com %f", cidade1, pib1, cidade2, pib2);
+            printf("%s com %f x %s com %f\n", cidade1, pib1, cidade2, pib2);
             if (pib1 == pib2){
                printf("Empate!!\n");
             }else if (pib1 > pib2){
@@ -264,7 +264,7 @@ int main() {
             printf("Carta 1 -  %s (%s): %d\n", cidade1, estado1, tur1);
             printf("Carta 2 -  %s (%s): %d\n", cidade2, estado2, tur2);
             if(tur1 == tur2){
-            printf("Resultado: Empate!!");
+            printf("Resultado: Empate!!\n");
             }else if(tur1 > tur2){
             printf("Resultado: Carta 1 (%s) é a vencedora!!\n", cidade1);
             }else {
@@ -272,10 +272,10 @@ int main() {
             }
             break;
             case 5:
-            printf("Densidade populacional: %.1f \n -- Carta 1 -- %s", densid1, cidade1);
-            printf("Densidade populacional: %.1f \n -- Carta 2 -- %s", densid2, cidade2);
+            printf("Densidade populacional: %.1f -- Carta 1 -- %s\n", densid1, cidade1);
+            printf("Densidade populacional: %.1f -- Carta 2 -- %s\n", densid2, cidade2);
             if(densid1 == densid2){
-            printf("Resultado: Empate!!");
+            printf("Resultado: Empate!!\n");
             }else if(densid1 < densid2){
             printf("Resultado: Carta 1 (%s) é a vencedora!!\n", cidade1);
             }else {
@@ -283,7 +283,7 @@ int main() {
             }
             break;
             default:
-            printf("Opção Inválida!");
+            printf("Opção Inválida!\n");
             break;
             }
          break;
